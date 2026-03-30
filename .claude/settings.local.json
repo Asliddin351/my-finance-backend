@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find c:/Users/pc/develop/startap/my-finance-backend/dist/src -name *.js)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

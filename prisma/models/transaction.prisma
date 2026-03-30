@@ -1,0 +1,15 @@
+model Transaction {
+    id         Int      @id @default(autoincrement())
+    title      String
+    amount     Decimal
+    type       TRansactionType @default(OUTCOME)
+    categoryId Int
+    category   Category @relation(fields: [categoryId], references: [id])
+    userId     Int
+    user       User     @relation(fields: [userId], references: [id])
+}
+
+enum TRansactionType {
+    INCOME
+    OUTCOME
+}
