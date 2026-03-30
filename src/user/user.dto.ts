@@ -1,5 +1,14 @@
 import { IsEmail, IsInt, IsString, Length, Min } from 'class-validator';
 
+export class LoginDto {
+  @IsEmail()
+  email: string;
+
+  @IsString()
+  @Length(8, 50)
+  password: string;
+}
+
 export class UserDto {
   name: string;
   email: string;
@@ -19,8 +28,4 @@ export class createUserDto {
   @IsString()
   @Length(8, 50)
   password: string;
-
-  @IsString()
-  @Length(8, 50)
-  confirm_password: string;
 }

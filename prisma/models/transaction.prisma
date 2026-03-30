@@ -5,7 +5,7 @@ model Transaction {
     type       TRansactionType @default(OUTCOME)
     categoryId Int
     category   Category @relation(fields: [categoryId], references: [id])
-    userId     Int
+    userId     String
     user       User     @relation(fields: [userId], references: [id])
 }
 
