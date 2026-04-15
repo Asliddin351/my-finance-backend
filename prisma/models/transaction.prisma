@@ -13,3 +13,4 @@ enum TRansactionType {
     INCOME
     OUTCOME
 }
+
